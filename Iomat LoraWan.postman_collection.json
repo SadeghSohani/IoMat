@@ -1,0 +1,75 @@
+{
+	"info": {
+		"_postman_id": "9b4204f8-63fd-4883-b67d-31cdd7ad3bf0",
+		"name": "Iomat LoraWan",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "11357832"
+	},
+	"item": [
+		{
+			"name": "send vessel tracking data to server",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"vesselId\": \"8afc1f4b-394f-4ecd-9715-c8e74106e3c7\",\n    \"latitude\": 40.713016,\n    \"longitude\": 47.750710,\n    \"status\": 1,\n    \"accuracy\": 0,\n    \"GpsStatus\": 1,\n    \"batteryStatus\": 1\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "77.237.82.37:4041/tracking/add",
+					"host": [
+						"77",
+						"237",
+						"82",
+						"37"
+					],
+					"port": "4041",
+					"path": [
+						"tracking",
+						"add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "add portIO (LoraWan)",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"portId\": \"343ad380-f028-4672-bb82-1d9249aedbe6\",\n    \"vesselId\": \"343ad380-f028-4672-bb82-1d9249aedbe6\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "77.237.82.37:4041/portIO/add",
+					"host": [
+						"77",
+						"237",
+						"82",
+						"37"
+					],
+					"port": "4041",
+					"path": [
+						"portIO",
+						"add"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

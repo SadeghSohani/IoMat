@@ -1,0 +1,1307 @@
+{
+	"info": {
+		"_postman_id": "dfd8a8ae-ab8b-4060-9712-2c3f9d32e97c",
+		"name": "Iomat",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "11357832"
+	},
+	"item": [
+		{
+			"name": "register user",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\": \"user3@iomat.com\",\n    \"password\": \"12345678\",\n    \"firstName\": \"Sadegh\",\n    \"lastName\": \"Sohani\",\n    \"legal\": false,\n    \"companyName\": \"\",\n    \"address\": \"\",\n    \"phoneNumber\": \"\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:4041/auth/register",
+					"host": [
+						"localhost"
+					],
+					"port": "4041",
+					"path": [
+						"auth",
+						"register"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "register user",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"s.sohani1998@gmail.com\",\n    \"password\": \"12345678\",\n    \"firstName\": \"Sadegh\",\n    \"lastName\": \"Sohani\",\n    \"legal\": false,\n    \"companyName\": \"\",\n    \"address\": \"\",\n    \"phoneNumber\": \"\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "77.237.82.37:4041/auth/register",
+							"host": [
+								"77",
+								"237",
+								"82",
+								"37"
+							],
+							"port": "4041",
+							"path": [
+								"auth",
+								"register"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "376"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"178-c20BOLjvV4gyQKf2Z1ZU7dw0zso\""
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 13 Jul 2023 09:43:30 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"success\": true,\n    \"status\": 200,\n    \"message\": \"User registered successfully.\",\n    \"data\": {\n        \"userId\": \"167d5d94-8175-47f4-bb5a-6547042bfee0\",\n        \"email\": \"s.sohani1998@gmail.com\",\n        \"password\": \"12345678\",\n        \"firstName\": \"Sadegh\",\n        \"lastName\": \"Sohani\",\n        \"legal\": false,\n        \"companyName\": \"\",\n        \"address\": \"\",\n        \"phoneNumber\": \"\",\n        \"updatedAt\": \"2023-07-13T09:43:30.322Z\",\n        \"createdAt\": \"2023-07-13T09:43:30.322Z\"\n    },\n    \"error\": null\n}"
+				}
+			]
+		},
+		{
+			"name": "login user",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\": \"admin@iomat.com\",\n    \"password\": \"12345678\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:4041/auth/login",
+					"host": [
+						"localhost"
+					],
+					"port": "4041",
+					"path": [
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "login user",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"s.sohani1998@gmail.com\",\n    \"password\": \"12345678\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "77.237.82.37:4041/auth/login",
+							"host": [
+								"77",
+								"237",
+								"82",
+								"37"
+							],
+							"port": "4041",
+							"path": [
+								"auth",
+								"login"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "275"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"113-2eUf2MmjUGNwhiusOERJL3Ah0kI\""
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 13 Jul 2023 09:44:01 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"success\": true,\n    \"status\": 200,\n    \"message\": \"User logged in successfully.\",\n    \"data\": {\n        \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2ODkyNzc0NDEsImVtYWlsIjoicy5zb2hhbmkxOTk4QGdtYWlsLmNvbSIsImlhdCI6MTY4OTI0MTQ0MX0.WsZ_fnENpbUceepeyBrH-2TccTb7EelypNvU3w457uA\"\n    },\n    \"error\": null\n}"
+				}
+			]
+		},
+		{
+			"name": "send vessel tracking data to server",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"vesselId\": \"8afc1f4b-394f-4ecd-9715-c8e74106e3c7\",\n    \"latitude\": 40.713016,\n    \"longitude\": 47.750710,\n    \"status\": 1,\n    \"accuracy\": 0,\n    \"GpsStatus\": 1,\n    \"batteryStatus\": 1\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "127.0.0.1:4041/tracking/add",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "4041",
+					"path": [
+						"tracking",
+						"add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "add vessel",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2OTc0MDQwNDAsImVtYWlsIjoidXNlcjNAaW9tYXQuY29tIiwiaWF0IjoxNjk3MzY4MDQwfQ.1K_1lLJb7VJpCPDnwyO-O-t0Ikqg6C3biENpzdDhXSI",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"vesselSerial\": \"VH12345\",\n    \"vesselName\": \"VN1\",\n    \"vesselType\": \"ship\",\n    \"about\": \"Some data about this vessel.\",\n    \"vesselSize\": \"300*500\",\n    \"flag\": \"Iran\",\n    \"inTransit\": false\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "127.0.0.1:4041/vessel/add",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "4041",
+					"path": [
+						"vessel",
+						"add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update vessel",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2OTMwMjI0MDYsImVtYWlsIjoicy5zb2hhbmkxOTk4QGdtYWlsLmNvbSIsImlhdCI6MTY5Mjk4NjQwNn0.kM_t9D8Ekgme6kOHqciWrnjxWgJx9Er9aUSzEeDwA6k",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"vesselId\": \"6c2dba3a-42c0-48f9-ac0e-70480af6b31a\",\n    \"vesselSerial\": null,\n    \"vesselName\": \"V name03\",\n    \"vesselType\": null,\n    \"about\": null,\n    \"vesselSize\": null,\n    \"flag\": null,\n    \"inTransit\": null\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "127.0.0.1:4041/vessel/update",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "4041",
+					"path": [
+						"vessel",
+						"update"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "add port (admin)",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2OTczMTczMTQsImVtYWlsIjoiYWRtaW5AaW9tYXQuY29tIiwiaWF0IjoxNjk3MjgxMzE0fQ.t7jnTbzdObrHZ12QIZ1R5H60IN1rYpqLu6DoP6omF6I",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"portSerial\": \"VH12345\",\n    \"portName\": \"P name03\",\n    \"portType\": \"Y\",\n    \"about\": \"about\",\n    \"country\": \"Iran\",\n    \"latitude\": 40.713016,\n    \"longitude\": 40.713016\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "127.0.0.1:4041/adminPort/add",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "4041",
+					"path": [
+						"adminPort",
+						"add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update port (admin)",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2OTI5MTE0MzgsImVtYWlsIjoicy5zb2hhbmkxOTk4QGdtYWlsLmNvbSIsImlhdCI6MTY5Mjg3NTQzOH0.Ey2xLegiwdqOsPkZBZOQe1XlQ6BKsH14UZQKQzz9HTI",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"portId\": \"794a4881-32ec-472f-ac27-47ac7ff68f41\",\n    \"portSerial\": null,\n    \"portName\": null,\n    \"portType\": null,\n    \"about\": \"about yyyyyyyyyyyyy\",\n    \"country\": null,\n    \"latitude\": null,\n    \"longitude\": null\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "127.0.0.1:4041/adminPort/update",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "4041",
+					"path": [
+						"adminPort",
+						"update"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "user adding port",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2OTczMTkxNTIsImVtYWlsIjoidXNlckBpb21hdC5jb20iLCJpYXQiOjE2OTcyODMxNTJ9.Q1blen0gblPa6y8MF6kKoyo_4bzO3t3OdJgceY1rPWw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"portId\": \"39c2f8fd-b585-4a13-80c2-d6e9b0bc29b4\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "127.0.0.1:4041/userPorts/add",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "4041",
+					"path": [
+						"userPorts",
+						"add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "send email verification",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:4041/auth/verify/email/send/s.sohani1998@gmail.com",
+					"host": [
+						"localhost"
+					],
+					"port": "4041",
+					"path": [
+						"auth",
+						"verify",
+						"email",
+						"send",
+						"s.sohani1998@gmail.com"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "send email verification",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "127.0.0.1:4041/auth/verify/email/send/s.sohani1998@gmail.com",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "4041",
+							"path": [
+								"auth",
+								"verify",
+								"email",
+								"send",
+								"s.sohani1998@gmail.com"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "137"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"89-aDlIkq01RnFzNhHiQJUgVgVMfIE\""
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 10 Jun 2023 13:17:13 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"success\": true,\n    \"status\": 200,\n    \"message\": \"Email sent successfully. please check your email and click on sent link.\",\n    \"data\": {},\n    \"error\": null\n}"
+				}
+			]
+		},
+		{
+			"name": "get vessel tracking data",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "77.237.82.37:4041/tracking/get?vesselId=8afc1f4b-394f-4ecd-9715-c8e74106e3c7&offset=0&size=10",
+					"host": [
+						"77",
+						"237",
+						"82",
+						"37"
+					],
+					"port": "4041",
+					"path": [
+						"tracking",
+						"get"
+					],
+					"query": [
+						{
+							"key": "vesselId",
+							"value": "8afc1f4b-394f-4ecd-9715-c8e74106e3c7"
+						},
+						{
+							"key": "offset",
+							"value": "0"
+						},
+						{
+							"key": "size",
+							"value": "10"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get vessel by owner",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2OTMwMjI0MDYsImVtYWlsIjoicy5zb2hhbmkxOTk4QGdtYWlsLmNvbSIsImlhdCI6MTY5Mjk4NjQwNn0.kM_t9D8Ekgme6kOHqciWrnjxWgJx9Er9aUSzEeDwA6k",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:4041/vessel/get?vesselId=6c2dba3a-42c0-48f9-ac0e-70480af6b31a",
+					"host": [
+						"localhost"
+					],
+					"port": "4041",
+					"path": [
+						"vessel",
+						"get"
+					],
+					"query": [
+						{
+							"key": "vesselId",
+							"value": "6c2dba3a-42c0-48f9-ac0e-70480af6b31a"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get all vessels by owner",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2OTMwMjI0MDYsImVtYWlsIjoicy5zb2hhbmkxOTk4QGdtYWlsLmNvbSIsImlhdCI6MTY5Mjk4NjQwNn0.kM_t9D8Ekgme6kOHqciWrnjxWgJx9Er9aUSzEeDwA6k",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:4041/vessel/get/all?offset=0&size=10",
+					"host": [
+						"localhost"
+					],
+					"port": "4041",
+					"path": [
+						"vessel",
+						"get",
+						"all"
+					],
+					"query": [
+						{
+							"key": "offset",
+							"value": "0"
+						},
+						{
+							"key": "size",
+							"value": "10"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get me",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2OTc0MDQxNjIsImVtYWlsIjoidXNlcjJAaW9tYXQuY29tIiwiaWF0IjoxNjk3MzY4MTYyfQ.5B-WTE3iYOtUtlYLyJyhYQ54aiihywPSnc-0AZlG23I",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:4041/user/getMe",
+					"host": [
+						"localhost"
+					],
+					"port": "4041",
+					"path": [
+						"user",
+						"getMe"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get all ports",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:4041/port/get?offset=0&size=10",
+					"host": [
+						"localhost"
+					],
+					"port": "4041",
+					"path": [
+						"port",
+						"get"
+					],
+					"query": [
+						{
+							"key": "offset",
+							"value": "0"
+						},
+						{
+							"key": "size",
+							"value": "10"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get user ports",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2OTczMTkxNTIsImVtYWlsIjoidXNlckBpb21hdC5jb20iLCJpYXQiOjE2OTcyODMxNTJ9.Q1blen0gblPa6y8MF6kKoyo_4bzO3t3OdJgceY1rPWw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:4041/userPorts/get?offset=0&size=10",
+					"host": [
+						"localhost"
+					],
+					"port": "4041",
+					"path": [
+						"userPorts",
+						"get"
+					],
+					"query": [
+						{
+							"key": "offset",
+							"value": "0"
+						},
+						{
+							"key": "size",
+							"value": "10"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get port by id",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:4041/port/get/id?portId=d85bd8e8-9ccd-4f89-9b1d-d31880f323c2",
+					"host": [
+						"localhost"
+					],
+					"port": "4041",
+					"path": [
+						"port",
+						"get",
+						"id"
+					],
+					"query": [
+						{
+							"key": "portId",
+							"value": "d85bd8e8-9ccd-4f89-9b1d-d31880f323c2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get all port by name",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:4041/port/get/name?portName=P name03&offset=0&size=10",
+					"host": [
+						"localhost"
+					],
+					"port": "4041",
+					"path": [
+						"port",
+						"get",
+						"name"
+					],
+					"query": [
+						{
+							"key": "portName",
+							"value": "P name03"
+						},
+						{
+							"key": "offset",
+							"value": "0"
+						},
+						{
+							"key": "size",
+							"value": "10"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get all vessels by name",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:4041/public/vessel/name?vesselName=V name03&offset=0&size=10",
+					"host": [
+						"localhost"
+					],
+					"port": "4041",
+					"path": [
+						"public",
+						"vessel",
+						"name"
+					],
+					"query": [
+						{
+							"key": "vesselName",
+							"value": "V name03"
+						},
+						{
+							"key": "offset",
+							"value": "0"
+						},
+						{
+							"key": "size",
+							"value": "10"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get all vessels in transit",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2OTI2OTM2NjAsImVtYWlsIjoicy5zb2hhbmkxOTk4QGdtYWlsLmNvbSIsImlhdCI6MTY5MjY1NzY2MH0.GlRZy30W5DhfEj7gXoe3mwkgVY0g639oFAgDjQRomq4",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:4041/vessel/get/transit/all?offset=0&size=10",
+					"host": [
+						"localhost"
+					],
+					"port": "4041",
+					"path": [
+						"vessel",
+						"get",
+						"transit",
+						"all"
+					],
+					"query": [
+						{
+							"key": "offset",
+							"value": "0"
+						},
+						{
+							"key": "size",
+							"value": "10"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get all vessels (Public)",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:4041/public/vessel/get/all?offset=0&size=10",
+					"host": [
+						"localhost"
+					],
+					"port": "4041",
+					"path": [
+						"public",
+						"vessel",
+						"get",
+						"all"
+					],
+					"query": [
+						{
+							"key": "offset",
+							"value": "0"
+						},
+						{
+							"key": "size",
+							"value": "10"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "admin verify user",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2OTc0MDc1MzcsImVtYWlsIjoiYWRtaW5AaW9tYXQuY29tIiwiaWF0IjoxNjk3MzcxNTM3fQ.NCFfZedJDxBbT_EwCtEKJc0808o_-bSltJIf26yljEA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"userEmail\": \"user2@iomat.com\",\n    \"userRole\": \"EXPERT\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "127.0.0.1:4041/admin/user/verify",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "4041",
+					"path": [
+						"admin",
+						"user",
+						"verify"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get unverified users",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2OTczMTYxOTcsImVtYWlsIjoiYWRtaW5AaW9tYXQuY29tIiwiaWF0IjoxNjk3MjgwMTk3fQ.2RkiNiMT9HErzRosCiLGyXLFPP1_Rlg2aJEK71La3ZM",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "127.0.0.1:4041/admin/users/unverified?offset=0&size=10",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "4041",
+					"path": [
+						"admin",
+						"users",
+						"unverified"
+					],
+					"query": [
+						{
+							"key": "offset",
+							"value": "0"
+						},
+						{
+							"key": "size",
+							"value": "10"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete port (admin)",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2OTczMTk1NDMsImVtYWlsIjoiYWRtaW5AaW9tYXQuY29tIiwiaWF0IjoxNjk3MjgzNTQzfQ.8m6oEG07EOxmfFTnzfJi6jJgN8irf9TjDbovhqdYmFI",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "127.0.0.1:4041/adminPort/delete?portId=39c2f8fd-b585-4a13-80c2-d6e9b0bc29b4",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "4041",
+					"path": [
+						"adminPort",
+						"delete"
+					],
+					"query": [
+						{
+							"key": "portId",
+							"value": "39c2f8fd-b585-4a13-80c2-d6e9b0bc29b4"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete user port",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2OTczMTczODEsImVtYWlsIjoidXNlckBpb21hdC5jb20iLCJpYXQiOjE2OTcyODEzODF9.peQqD3f_ZVRgeYhVuZPufxPfi0lySkitpTDsFFDmW5s",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "127.0.0.1:4041/userPorts/delete?portId=39c2f8fd-b585-4a13-80c2-d6e9b0bc29b4",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "4041",
+					"path": [
+						"userPorts",
+						"delete"
+					],
+					"query": [
+						{
+							"key": "portId",
+							"value": "39c2f8fd-b585-4a13-80c2-d6e9b0bc29b4"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete user",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2OTczMTYyNDYsImVtYWlsIjoidXNlckBpb21hdC5jb20iLCJpYXQiOjE2OTcyODAyNDZ9.wNhXv-9XXd85lEhRlw4OgWlKpjrEt_W9D20vETMXwUU",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "127.0.0.1:4041/user/delete?id=7b655139-659e-428a-9581-ce5a27653138",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "4041",
+					"path": [
+						"user",
+						"delete"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "7b655139-659e-428a-9581-ce5a27653138"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete vessel",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2OTczMTY0NTEsImVtYWlsIjoidXNlckBpb21hdC5jb20iLCJpYXQiOjE2OTcyODA0NTF9.jVxvJRctbgMCe4fo2iuGlsN6iV7ME5aAohofXiXuLow",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "127.0.0.1:4041/vessel/delete?id=343ad380-f028-4672-bb82-1d9249aedbe6",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "4041",
+					"path": [
+						"vessel",
+						"delete"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "343ad380-f028-4672-bb82-1d9249aedbe6"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "add portIO (LoraWan)",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"portId\": \"343ad380-f028-4672-bb82-1d9249aedbe6\",\n    \"vesselId\": \"343ad380-f028-4672-bb82-1d9249aedbe6\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "127.0.0.1:4041/portIO/add",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "4041",
+					"path": [
+						"portIO",
+						"add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get portIO data",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:4041/portIO/get?portId=343ad380-f028-4672-bb82-1d9249aedbe6&offset=0&size=3",
+					"host": [
+						"localhost"
+					],
+					"port": "4041",
+					"path": [
+						"portIO",
+						"get"
+					],
+					"query": [
+						{
+							"key": "portId",
+							"value": "343ad380-f028-4672-bb82-1d9249aedbe6"
+						},
+						{
+							"key": "offset",
+							"value": "0"
+						},
+						{
+							"key": "size",
+							"value": "3"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get all alarms by user",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2OTc0MDQyMjEsImVtYWlsIjoidXNlckBpb21hdC5jb20iLCJpYXQiOjE2OTczNjgyMjF9.BVuIHZr-Fnw2wPjCEtAy2WDQCsLclhjMpaJ-A97uk1Q",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:4041/alarm/get?email=user3@iomat.com&offset=0&size=10",
+					"host": [
+						"localhost"
+					],
+					"port": "4041",
+					"path": [
+						"alarm",
+						"get"
+					],
+					"query": [
+						{
+							"key": "email",
+							"value": "user3@iomat.com"
+						},
+						{
+							"key": "offset",
+							"value": "0"
+						},
+						{
+							"key": "size",
+							"value": "10"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get all alarms (admin)",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2OTc0MDQyMjEsImVtYWlsIjoidXNlckBpb21hdC5jb20iLCJpYXQiOjE2OTczNjgyMjF9.BVuIHZr-Fnw2wPjCEtAy2WDQCsLclhjMpaJ-A97uk1Q",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:4041/alarm/get/all?offset=0&size=10",
+					"host": [
+						"localhost"
+					],
+					"port": "4041",
+					"path": [
+						"alarm",
+						"get",
+						"all"
+					],
+					"query": [
+						{
+							"key": "offset",
+							"value": "0"
+						},
+						{
+							"key": "size",
+							"value": "10"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
