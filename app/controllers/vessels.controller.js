@@ -72,7 +72,6 @@ export function getVesselsInTransit(req, res) {
     const vesselId = req.query.vesselId
     log.debug(vesselId)
     Vessel.findAll({
-        attributes: ['vesselSerial', 'vesselName', 'vesselType', 'about'],
         where: {
             inTransit: true,
         },

@@ -1,4 +1,4 @@
-import {INTEGER, STRING, BOOLEAN, UUIDV4, UUID} from 'sequelize';
+import {INTEGER, STRING, BOOLEAN, UUIDV4, UUID, DECIMAL} from 'sequelize';
 import sequelize from '#root/utils/database';
 
 const Vessel = sequelize.define('vessel', {
@@ -31,6 +31,18 @@ const Vessel = sequelize.define('vessel', {
     },
     inTransit: {
         type: BOOLEAN,
+    },
+    lastLatitude: {
+        type: DECIMAL,
+    },
+    lastLongitude: {
+        type: DECIMAL,
+    },
+    originPort: {
+        type: UUID,
+    },
+    destinationPort: {
+        type: UUID,
     },
 }, {
     tableName: 'vessels'

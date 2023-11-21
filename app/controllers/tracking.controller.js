@@ -2,6 +2,8 @@ import Tracking from '#root/models/tracking.model';
 import log from '#root/utils/logger';
 import response from '#root/utils/response';
 import message from "#root/utils/responseMessages";
+import User from "#root/models/user.model";
+import Vessel from "#root/models/vessel.model";
 
 export function addTrackingData(req, res) {
     Tracking.create({
@@ -16,10 +18,26 @@ export function addTrackingData(req, res) {
         originPort: req.body.originPort,
         destinationPort: req.body.destinationPort
     }).then(tracking => {
-        log.info("");
-        res.json(response.success(message.successful, tracking));
+
+        Vessel.findOne({where: {vesselId: req.body.vesselId}}).then(vessel => {
+
+            return vessel.update({
+                lastLatitude: req.body.latitude,
+                lastLongitude: req.body.longitude,
+                originPort: req.body.originPort,
+                destinationPort: req.body.destinationPort
+            })
+
+        }).then(vessel => {
+            log.info("");
+            res.json(response.success(message.successful, tracking));
+        }).catch(err => {
+            log.error(`update vessel failed in add tracking data. ${err}`);
+            res.send(message.failure);
+        });
+
     }).catch(err => {
-        log.error("");
+        log.error(`adding tracking data failed. ${err}`);
         res.json(response.failure(500, message.failure, err));
     });
 }

@@ -842,24 +842,18 @@
 			"name": "get all vessels in transit",
 			"request": {
 				"auth": {
-					"type": "bearer",
-					"bearer": [
-						{
-							"key": "token",
-							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2OTI2OTM2NjAsImVtYWlsIjoicy5zb2hhbmkxOTk4QGdtYWlsLmNvbSIsImlhdCI6MTY5MjY1NzY2MH0.GlRZy30W5DhfEj7gXoe3mwkgVY0g639oFAgDjQRomq4",
-							"type": "string"
-						}
-					]
+					"type": "noauth"
 				},
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "localhost:4041/vessel/get/transit/all?offset=0&size=10",
+					"raw": "localhost:4041/public/vessel/get/transit/all?offset=0&size=10",
 					"host": [
 						"localhost"
 					],
 					"port": "4041",
 					"path": [
+						"public",
 						"vessel",
 						"get",
 						"transit",

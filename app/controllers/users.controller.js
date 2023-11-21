@@ -7,19 +7,34 @@ import message from "#root/utils/responseMessages";
 
 dotenv.config();
 const secret = process.env.SECRET || 'thisIsMySecret';
+const adminEmail = process.env.ADMIN_EMAIL;
 
 export async function getMe(req,res) {
 
     const email = req.email;
 
-    User.findOne({where: {email: email}}).then(user => {
+    if(email === adminEmail) {
+        res.json(response.success(message.successful, {
+            email: adminEmail,
+            firstName: "مدیر سیستم",
+            lastName: "",
+            legal: false,
+            companyName: "",
+            address: "",
+            phoneNumber: "+989101111111",
+            verified: true,
+            role: "ADMIN"
+        }));
+    } else {
+        User.findOne({where: {email: email}}).then(user => {
 
-        res.json(response.success(message.successful, user));
+            res.json(response.success(message.successful, user));
 
-    }).catch(err => {
+        }).catch(err => {
             log.error(err);
             res.json(response.failure(500, message.failure, err));
-    });
+        });
+    }
     
 }
 

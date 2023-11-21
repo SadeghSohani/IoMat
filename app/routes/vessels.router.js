@@ -12,7 +12,6 @@ const vesselsRouter = Router();
 vesselsRouter.post('/add', addVessel);
 vesselsRouter.get('/get', getVesselByOwner);
 vesselsRouter.get('/get/all', getAllVesselsByOwner);
-vesselsRouter.get('/get/transit/all', getVesselsInTransit);
 vesselsRouter.put('/update', updateVessel);
 vesselsRouter.delete('/delete', deleteVessel);
 

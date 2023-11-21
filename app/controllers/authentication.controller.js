@@ -136,7 +136,7 @@ export function adminVerifyUser(req,res) {
     const userEmail = req.body.userEmail;
     const email = req.email
 
-    if (email === adminEmail) {
+    if (email === adminEmail && role !== "ADMIN") {
         User.findOne({where: {email: userEmail}}).then(user => {
 
             return user.update({verified: true, role: role})
